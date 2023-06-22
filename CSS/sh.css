@@ -1,0 +1,289 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*=====전체스타일=====*/
+* {
+	font-family:"맑은 고딕", "바탕";
+	margin:0 auto;
+	padding:0;
+	}
+	
+ul {
+	list-style:none;
+	}
+a {
+	text-decoration:none;
+	color:inherit;
+	display:block;
+	}
+body {
+	background:rgba(255,255,255,1);
+	color:#333333;
+	width:100%;
+	}			
+clear {
+	clear:both;
+	}		
+	
+/*=====레이아웃=====*/
+#container {
+	width:1200px;
+	}
+header {
+	height:100px;
+	}
+.imgslide {
+	width:1200px;
+	height:300px;
+	overflow:hidden;
+	position:relative;
+	background:#000;	
+	}		
+.contents {
+	height:200px;
+		}
+footer {
+	height:100px;
+	background:rgba(51,51,51,0.9);	}	
+
+/*=====헤더=====*/
+
+.logo {
+	width:200px;
+	float:left;
+	margin-top:30px;
+	}
+.logo>a>img {
+	width:200px;
+	height:40px;
+}	
+nav {
+	width:800px;
+	float:right;
+	margin-top:30px;
+	position:relative;
+	}	/*서브메뉴 옆까지 내려오게 확장시킬때는 nav에도 릴렉티브 사용*/
+.navi>li {
+	width:200px;
+	float:left;
+	transition:all 0.4s;
+	text-align:center;
+	position:relative;
+	}
+.navi>li:hover{
+	background:rgba(255,153,153,0.7);
+	color:#fff;
+	}	/*메인메뉴 색변화*/
+
+.navi li a {
+	padding:10px;
+	}	
+.submenu {
+	background:rgba(255,255,255,0.6);
+	width:100%;
+	position:absolute;
+	display:none;
+	z-index:33;
+	color:#333333;
+	}
+.aa {
+	width:400px;
+	left:-400px;
+	height:175px;
+	position:absolute;
+	background:rgba(255,255,255,0.6);
+	top:45px;
+	}	
+.submenu>li {
+	transition:all 0.4s;
+}	
+.submenu li:hover {
+	background:rgba(204,102,153,1);
+	color:#fff;
+	}			
+	/*=====이미지슬라이딩=====*/
+.imgslide>a {
+	position:absolute;
+	transition:all 3s;
+	overflow:hidden;
+	left:0;
+	top:0;
+	}
+.imgslide>img {
+	width:100%;
+	}	
+.wellcome {
+	width:500px;
+	height:50px;
+	background:rgba(153,153,153,0.7);
+	position:absolute;
+	left:30%;
+	top:35%;
+	text-align:center;
+	color:#fff;
+	font-weight:bold;
+	line-height:50px;
+	}	
+/*=====콘텐츠=====*/
+.contents>div {
+	float:left;
+	height:180px;
+	width:390px;
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-left:8px;
+	}
+
+.tab_btn ul {
+	overflow:hidden;
+}	/*이게중요 */
+.tab_btn li{
+	float:left;
+	border:1px solid #000;
+	width:100px;
+	border-bottom:none;
+	margin-right:-1px;
+	text-align:center;
+	font-weight:bold;
+	background:#ddd;
+	}
+.tab_btn li:hover {
+	background:#eee;
+	}
+.tab_btn li.active {
+	background:#fff;
+} /*버튼눌렀을때 활성화된 쪽이 색이 변경됨. 다른쪽은 색 다시바뀜.*/
+.tab_btn li a {
+	padding:5px 0;
+	}	
+.tab_cont {
+	width:390px;
+	height:146px;
+	background:#fff;
+	border:1px solid #333;
+	margin-left:-5px;
+	}
+
+.tab_gallery img{
+	float:left;
+	margin-top:30px;
+	margin-left:27px;
+	}	
+.tab_gallery img:hover {
+	opacity:0.5;
+	}		
+.notice li {
+	width:370px;
+	height:30px;
+	line-height:30px;
+	font-size:15px;
+		margin-top:5px;
+	margin-left:5px;
+	padding:0 5px;
+
+	}	
+.notice li span {
+	float:right;
+	}
+.notice li:hover {
+	font-weight:bold;
+	}		
+.notice li:nth-child(2n) {
+	background:rgba(204,204,204,1);}		
+.cont2, .cont3 {
+	position:relative;
+}	
+.cont2 img, .cont3 img {
+	width:390px;
+	height:180px;
+	}		
+.cont2 img:hover {
+	opacity:0.5;
+	}	
+.cont3 img:hover {
+	opacity:0.5;
+	}
+		
+.banner {
+	width:300px;
+	height:40px;
+	background:rgba(0,0,0,0.4);
+	color:#fff;
+	font-weight:bold;
+	position:absolute;
+	left:45px;
+	top:75px;
+	text-align:center;
+	line-height:45px;
+}		
+/* .cont3 {
+	overflow:hidden;
+	} 내가 지정한 디브보다 사진크기가 클 경우는 사진의 크기를 설정하거나, overflow:hidden적용 */	
+	
+	
+/*=====레이어팝업=====*/
+.modal {
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.5);
+	position:fixed;
+	left:0;
+	top:0;
+	z-index:99;
+	display:none;
+	} 
+.body {
+	width:600px;
+	height:150px;
+	background:#fff;
+	margin:150px auto;
+	padding:20px;
+	border:5px solid rgba(153,153,153,1);
+	}	
+.button {
+	margin-top:10px;
+	text-align:right;
+	}
+button {
+	padding:5px 10px;
+	background:rgba(102,102,153,1);
+	color:#fff;
+	border:none;
+	border-radius:5px;
+
+	}	
+	
+/*=====푸터=====*/
+footer>div {
+	height:100px;
+	float:left;}
+
+.foot1 {
+	width:200px;
+	margin-top:30px;
+	opacity:0.5;
+	}
+.foot2 {
+	width:800px;
+	text-align:center;
+	line-height:100px;
+	color:#fff;
+	}
+.foot3 {
+	width:200px;
+	
+	}
+.foot3 li {
+	display:inline-block;
+	margin-top:20px;
+	margin-left:10px;
+	width:50px;
+	height50px;
+	}
+.foot3 img {
+	width:100%;
+	}	
+.foot3 img:hover {
+	opacity:0.5;
+	}		
+	
